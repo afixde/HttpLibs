@@ -51,9 +51,9 @@ public class PicsSearch {
 		// @formatter:off
 		URI uri = new URIBuilder().setScheme("http").setHost("www.google.de").setPath("/search")
 				.setParameter("tbm", "isch")//
-				.setParameter("q", "Turtles")//
+				// .setParameter("q", "Turtles")//
 				// .setParameter("q", "марк котляр")//
-				// .setParameter("q", "лепс - я поднимаю руки")//
+				.setParameter("q", "лепс - я поднимаю руки")//
 				.build();
 		// @formatter:on
 		System.out.println(uri);
@@ -130,6 +130,7 @@ public class PicsSearch {
 		}
 	}
 
+	@SuppressWarnings("unused")
 	private static void showImageUrl(String... urls) {
 		JFrame frame = new JFrame();
 		frame.setTitle("Polygons");
@@ -259,6 +260,7 @@ public class PicsSearch {
 		frame.setVisible(true);
 	}
 
+	@SuppressWarnings("unused")
 	private static void followImageUrl(Element... elems) throws ClientProtocolException, IOException {
 		for (Element ele : elems) {
 			// String url = ele.parentNode() == null ? ele.attr("src") :
